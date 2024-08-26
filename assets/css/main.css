@@ -1,1 +1,78 @@
 @import './base.css';
+body{
+    font-family: var(--mainFont);
+    background-color: #eee;
+}
+.menu{
+    display: none;
+}
+.header{
+    background-color: #fff;
+    padding: 20px 0;
+}
+.header .logo{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.header .logo img{
+    width: 35px;
+}
+.header .logo a{
+    color:var(--mainColor);
+}
+.active{
+    font-weight: 900;
+}
+.nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.nav ul li a {
+    color:#101928
+}
+.auth{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:10px;
+
+}
+.auth a {
+    font-family:var(--subfont) ;
+    border-radius: 5px;
+    padding: 5.354176521695px 30px;
+}
+
+.auth .login{
+border: 2px solid var(--mainColor);
+color:var(--mainColor) ;
+font-weight: 700;
+}
+.auth .register{
+color: #fff;
+background-color: var(--mainColor);
+border: 2px solid var(--mainColor);
+}
+/* media header */
+@media screen and (max-width: 992px) {
+    .nav , .auth{
+        display: none;
+    }
+    .menu {
+        display: block;
+        order: 1;
+    }
+}
+@media screen and (max-width: 576px) {
+    .container{
+        width: calc(100%-120px);
+    }
+    .header .logo img{
+        width: 20px;
+    }
+    .header .logo a{
+        font-size: 10px;
+    }
+}
